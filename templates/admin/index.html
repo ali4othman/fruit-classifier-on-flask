@@ -1,0 +1,40 @@
+{% extends 'admin/master.html' %}
+
+{% block head_css %}
+
+{{ super() }}
+<style>
+    body{
+        background: linear-gradient(135deg, #ffe000, #799f0c);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+{% endblock %}
+
+
+
+{% block body %}
+<div>
+    <center>
+        <h1>Welcome to Database</h1>
+    </center>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><div style="font-size: large;font-style: oblique; color: #799f0c;">
+    <a href="{{ url_for('logout') }}">logout</a>
+</div>
+<br>
+<br>
+<br>
+<div style="font-size: large;font-style: oblique; color: #799f0c;">
+<a href="{{ url_for('main') }}">Main Page</a>
+</div>
+{% endblock %}

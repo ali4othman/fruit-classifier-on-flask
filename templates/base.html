@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="watermelon.png">
+    <title>Fruit Classifier</title>
+</head>
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            {% if message %}
+                <div class="flash-message">
+                    <span class="message-text">{{ message }}</span>
+                    <button class="close-button">x</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+    <script src="script.js"></script>
+    {% block body %}
+
+
+    <div class="image-uploader">
+        <form method="post" enctype="multipart/form-data">
+            <label for="img" class="label">Select Image</label>
+            <input type="file" name="image" class="image">
+            <input type="submit" class="submit" id="submit">
+        </form>
+    </div>
+
+    {% if class_name and accuracy%}
+        <div class="prediction-result">
+            <p>{{ class_name }}</p>
+            <br>
+            <p>Accuracy : >>  {{ accuracy }}</p>
+        </div>
+    {% endif %}
+
+    <div class="class-list">
+        {% for k,v in class_indicies.items() %}
+            <ul class="items">
+                <li>{{ v }}</li>
+            </ul>
+        {% endfor %}
+    </div>
+
+
+    <div style="font-size: large;font-style: oblique; color: #799f0c;margin: 30px;">
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+    {% endblock %}
+</body>
+</html>

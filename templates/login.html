@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div style="margin-left: 40%;margin-top: 50px;">
+    <form method="post">
+    <label for="password">Password : </label>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <input type="submit" value="Login">
+    </form>
+</div>
+
+<div style="display: flex;margin-left: 45%;margin-top: 80px;">
+    password >>> 12345
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="{{ url_for('main') }}" style="font-size: large;font-style: oblique;margin-left: 30px;">Main Page</a>
+{% endblock %}

@@ -1,0 +1,112 @@
+body{
+    background: linear-gradient(135deg, #ffe000, #799f0c);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.flash-message {
+    background-color: aquamarine;
+    color: black;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.close-button:hover {
+    color: #555;
+}
+
+.image-uploader{
+    background-color: #799f0c;
+    width: 20%;
+    display: flex;
+    min-height: 160px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.image-uploader .label{
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    color:black ;
+    text-align: center;
+    font-size: large;
+    align-items: center;
+}
+
+.image-uploader .image{
+    display: flex;
+    margin-bottom: 45px;
+    margin-left: 15%;
+    cursor: pointer;
+}
+
+
+.submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: auto;
+    position: relative;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.prediction-result{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    font-size: large;
+}
+
+.class-list{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin-top: 30px;
+}
+
+.class-list .items{
+    display: flex;
+    box-sizing: border-box;
+}
