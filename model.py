@@ -28,7 +28,7 @@ test = datagen.flow_from_directory(
     color_mode = 'rgb'
 )
 
-classes = os.listdir(os.path.join(directory,'train'))
+classes = os.listdir(os.path.join(directory, 'train'))
 
 
 model = Sequential([
@@ -62,20 +62,20 @@ history = model.fit(train, epochs = 50, verbose = 1, batch_size = 32, validation
 val_acc = history.history['val_accuracy']
 train_acc = history.history['accuracy']
 
-epoch_count = range(1,len(val_accacc)+1)
+epoch_count = range(1, len(val_accacc) + 1)
 
-plt.plot(epoch_count,val_acc,'b')
-plt.plot(epoch_count,train_acc,'r')
+plt.plot(epoch_count, val_acc, 'b')
+plt.plot(epoch_count, train_acc, 'r')
 
 plt.xlabel('Epochs')
 plt.ylabel('Acc')
-plt.legend('val_accuracy','accuracy')
+plt.legend('val_accuracy', 'accuracy')
 plt.title('Accuracy & Val_accuracy')
 plt.show()
 
 
-loss, acc = model.evaluate(test,batch_size=32,verbose=1)
+loss, acc = model.evaluate(test, batch_size=32, verbose=1)
 print(f'Model accuracy is : {acc}')
 
-with open('model.pkl','wb') as file:
-    pickle.dump(model,file)
+with open('model.pkl', 'wb') as file:
+    pickle.dump(model, file)
