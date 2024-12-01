@@ -1,4 +1,4 @@
-from flask import Flask,redirect,render_template,flash,url_for,request,
+from flask import Flask,redirect,render_template,flash,url_for,request
 from flask_sqlalchemy import SQLAlchemy
 
 from flask_admin import Admin
