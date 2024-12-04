@@ -62,7 +62,7 @@ history = model.fit(train, epochs = 50, verbose = 1, batch_size = 32, validation
 val_acc = history.history['val_accuracy']
 train_acc = history.history['accuracy']
 
-epoch_count = range(1, len(val_accacc) + 1)
+epoch_count = range(1, len(val_acc) + 1)
 
 plt.plot(epoch_count, val_acc, 'b')
 plt.plot(epoch_count, train_acc, 'r')
